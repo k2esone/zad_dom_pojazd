@@ -3,9 +3,6 @@ package pl.sda.zad_dom_pojazd;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,7 +30,7 @@ public class Main {
                 do {
                     System.out.println("Podaj rok produkcji (1990 - 2020");
                     rok = Integer.parseInt(scanner.nextLine());
-                } while (rok < 1990 && rok < 2020);
+                } while (rok < 1990 || rok > 2020);
 
                 System.out.println("Czy elektryczny? true/false");
                 boolean elektryczny = Boolean.parseBoolean(scanner.nextLine());
@@ -110,7 +107,7 @@ public class Main {
                     do {
                         System.out.println("Podaj rok produkcji (1990 - 2020");
                         rok = Integer.parseInt(scanner.nextLine());
-                    } while (rok < 1990 && rok < 2020);
+                    } while (rok < 1990 || rok > 2020);
 
                     System.out.println("Czy elektryczny? true/false");
                     boolean elektryczny = Boolean.parseBoolean(scanner.nextLine());
