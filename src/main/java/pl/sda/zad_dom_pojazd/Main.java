@@ -69,9 +69,8 @@ public class Main {
                     System.err.println("Nie znaleziono pojazdu");
                 } else if (pojazd != null) {
                     System.out.println("Pojazd: " + pojazd);
-                } else {
-                    System.err.println("Niepoprawna komenda!");
                 }
+
             } else if (toDo.equals("usun")) {
 
                 System.out.println("Podaj id pojazdu który chcesz usunać:");
@@ -84,8 +83,6 @@ public class Main {
                 } else if (pojazd != null) {
                     session.remove(pojazd);
                     System.out.println("Poprawnie usunieto: " + pojazd);
-                } else {
-                    System.err.println("Niepoprawna komenda!");
                 }
 
                 transaction.commit();
@@ -128,8 +125,6 @@ public class Main {
 
                     transaction.commit();
 
-                } else {
-                    System.err.println("Niepoprawna komenda!");
                 }
 
             }
